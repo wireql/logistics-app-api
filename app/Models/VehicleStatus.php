@@ -11,4 +11,8 @@ class VehicleStatus extends Model
     protected $fillable = [
         'name',
     ];
+
+    public function vehicle() {
+        return $this->hasMany(Vehicle::class, 'status_id');
+    }
 }

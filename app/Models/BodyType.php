@@ -11,4 +11,8 @@ class BodyType extends Model
     protected $fillable = [
         'name',
     ];
+
+    public function vehicle() {
+        return $this->hasMany(Vehicle::class, 'body_type_id');
+    }
 }

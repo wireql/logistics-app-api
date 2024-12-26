@@ -11,4 +11,8 @@ class FuelType extends Model
     protected $fillable = [
         'name',
     ];
+
+    public function vehicle() {
+        return $this->hasMany(Vehicle::class, 'fuel_type_id');
+    }
 }
