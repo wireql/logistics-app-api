@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('brand', 50);
             $table->year('year');
             $table->string('vin', 17);
-            $table->integer('engine_capacity')->default(0);
+            $table->decimal('engine_capacity', 4, 1)->default(0);
             $table->integer('mileage')->default(0);
 
             $table->unsignedBigInteger('category_id');
